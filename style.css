@@ -1,0 +1,8 @@
+* { font-family: 'Source Serif Pro', serif; }
+body { 
+    background: rgb(73, 73, 73);
+    color: white;
+}
+
+a, .nav-link { color: lime; }
+a:hover, .nav-link:hover { color: rgb(0, 119, 0); }

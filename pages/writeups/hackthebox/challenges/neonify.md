@@ -1,11 +1,8 @@
 ---
 layout: post
 author: k0d14k
+title: Neonify (web)
 ---
-
-# Neonify (web)
-
-### author: k0d14k
 
 Neonify its a web page written in Ruby that prints a glowing text provided by the user input.
 

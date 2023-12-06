@@ -1,11 +1,8 @@
 ---
 layout: post
 author: k0d14k
+title: Lovetok (web)
 ---
-
-# Lovetok (web)
-
-### author: k0d14k
 
 <p>LoveTok is a web application written in PHP that tells you when you'll find the love.</p>
 

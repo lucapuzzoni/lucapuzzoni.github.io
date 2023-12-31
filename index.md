@@ -21,7 +21,7 @@ layout: default
         </center>
 
         <br>
-        <small>29 Dec 2023</small>
+        <small>31 Dec 2023</small>
       </div>
   </div>
 </article>

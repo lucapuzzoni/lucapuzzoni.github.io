@@ -17,7 +17,7 @@ layout: default
         <p>Season 5 is started on HackTheBox. A new writeup for HackTheBox - Runner is now Available.</p>
         
         <center>
-          <a href="{{'/pages/writeups/hackthebox/machiens/runner/runner'}}" class="btn">Check it Out</a>
+          <a href="{{'/pages/writeups/hackthebox/machines/runner/runner'}}" class="btn">Check it Out</a>
         </center>
 
         <br>

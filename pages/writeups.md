@@ -16,6 +16,22 @@ layout: default
         <tr>
             <td><a href="https://www.hackthebox.com/">HackTheBox</a></td>
             <td>Web</td>
+            <td>Insomnia</td>
+            <td class="d-flex justify-content-center">
+                <a href="{{'/pages/writeups/hackthebox/challenges/insomnia/insomnia'}}" class="btn">Read</a>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://www.hackthebox.com/">HackTheBox</a></td>
+            <td>Web</td>
+            <td>JSCalc</td>
+            <td class="d-flex justify-content-center">
+                <a href="{{'/pages/writeups/hackthebox/challenges/jscalc/jscalc'}}" class="btn">Read</a>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://www.hackthebox.com/">HackTheBox</a></td>
+            <td>Web</td>
             <td>PDFy</td>
             <td class="d-flex justify-content-center">
                 <a href="{{'/pages/writeups/hackthebox/challenges/PDFy/pdfy'}}" class="btn">Read</a>

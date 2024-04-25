@@ -15,6 +15,14 @@ layout: default
     <tbody>
         <tr>
             <td><a href="https://www.hackthebox.com/">HackTheBox</a></td>
+            <td>Machine</td>
+            <td>Runner</td>
+            <td class="d-flex justify-content-center">
+                <a href="{{'/pages/writeups/hackthebox/machines/runner/runner'}}" class="btn">Read</a>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://www.hackthebox.com/">HackTheBox</a></td>
             <td>Web</td>
             <td>Insomnia</td>
             <td class="d-flex justify-content-center">

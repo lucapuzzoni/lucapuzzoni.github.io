@@ -1,9 +1,8 @@
 ---
 layout: post
 author: k0d14k
+title: HackTheBox - PDFy (web)
 ---
-
-# HackTheBox - PDFy
 
 ---
 

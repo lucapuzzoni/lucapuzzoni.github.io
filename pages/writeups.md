@@ -3,6 +3,26 @@ layout: default
 ---
 
 <h2>Writeups</h2>
+<!-- 2024 -->
+<table class="table table-dark caption-top table-striped table-hover text-light text-center">
+    <caption><h3>2024</h3></caption>
+    <thead>
+        <th scope="col">CTF</th>
+        <th scope="col">Category</th>
+        <th scope="col">Challenge</th>
+        <th scope="col">Writeup</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="https://www.hackthebox.com/">HackTheBox</a></td>
+            <td>Web</td>
+            <td>PDFy</td>
+            <td class="d-flex justify-content-center">
+                <a href="{{'/pages/writeups/hackthebox/challenges/PDFy/pdfy'}}" class="btn">Read</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 <!-- 2023 -->
 <table class="table table-dark caption-top table-striped table-hover text-light text-center">
